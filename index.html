@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./src/jquery.js"></script>
+  </head>
+  <body>
+    <div id = all>
+      <div id = head>
+
+      </div>
+      <br>
+      <p>
+        <strong> Hi, I'm Kenny! </strong> <br><br>
+      I'm a full-stack software developer specializing in creating dynamic, informative, and consise data visualizations. <br><br>
+        I currently work for the Atlanta Braves where I build new visuals & maintain and improve existing information systems for the Baseball Operations department. <br></br>
+        I grew up in Connecticut, went to college in St. Louis, and currently reside in Atlanta.<br><br>
+        In my spare time I'm an avid golfer and play the drums. <br><br>
+        The best way to reach me is by email: <br> <br>
+        <span id = email> kdorian22@gmail.com </span>
+      </p><br><br><br>
+
+      <!-- <p>
+      <strong>Contact</strong><br><br>
+      The best way to reach me is by email: <br> <br>
+      <span id = email> kdorian22@gmail.com </span>
+    </p><br><br><br> -->
+
+      <p>
+        <strong>Code</strong><br><br>
+        <li> <a id = git target = '_blank' href = 'https://github.com/kdorian22?tab=repositories'>Github</a> - My daily work is in private repositories, but my personal projects can be found here.</li>
+      </p>
+
+      <br><br><br>
+      <p>
+        <strong>Skills</strong><br><br>
+        <li> Javascript - D3 | jQuery </li>
+        <li> Python </li>
+        <li> SQL - SQL Server | MySQL </li>
+        <li> HTML </li>
+        <li> CSS </li>
+      </p>
+
+
+    </div>
+  </body>
+</html>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="./src/reactComps.js" type="text/babel"> </script>
+<link rel = 'stylesheet' href="./src/styles.css"> </link>
+
+<script type="text/babel">
+
+ReactDOM.render(
+  header(),
+  document.getElementById('head')
+);
+
+</script>
+<style>
+  #email{
+    font-weight: bold;
+  }
+  p{
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin-bottom:10px;
+    margin-top: 10px;
+  }
+  li{
+    margin-top: 0px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 5px
+  }
+  strong{
+    font-size: 28px;
+  }
+
+</style>

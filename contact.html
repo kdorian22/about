@@ -1,0 +1,48 @@
+<html>
+  <body>
+    <div id = 'all'>
+    </div>
+  </body>
+</html>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="./src/reactComps.js" type="text/babel"> </script>
+<link rel = 'stylesheet' href="./src/styles.css"> </link>
+<script type="text/babel">
+
+function Contact(proj, odd, desc, pic){
+  return (
+    <div id = 'contact'>
+      The best way to reach me is by email at:
+       <br></br> <br></br>
+       <strong> kdorian22 [at] gmail [dot] com </strong>
+    </div>
+  );
+}
+
+class Contacts extends React.Component {
+  render() {
+    return (
+      <div>
+        {header()}
+        <h1> Contact </h1>
+        {Contact()}
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Contacts />,
+  document.getElementById('all')
+);
+
+</script>
+
+
+<style>
+  #contact{
+    font-size: 22px;
+  }
+</style>

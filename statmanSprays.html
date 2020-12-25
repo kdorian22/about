@@ -1,0 +1,59 @@
+<html>
+  <body>
+    <div id = 'all'>
+    </div>
+  </body>
+</html>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="./src/reactComps.js" type="text/babel"> </script>
+<link rel = 'stylesheet' href="./src/styles.css"> </link>
+<link rel = 'stylesheet' href="./src/projectStyles.css"> </link>
+
+<script type="text/babel">
+
+class Projects extends React.Component {
+  render() {
+    var desc = `Statman Sprays is a Flask web app used by college baseball teams to scout upcoming opponents.
+     It's a project I started as a student manager of the WashU baseball team
+     and have worked on on-and-off for the last couple years.`
+
+    var desc2 = `After using python to scrape the NCAA stats repository and backfill a MySQL database with 3 years of
+    play-by-play text strings, I parse each string to extract a batter, hit type, and hit location
+    for every single ball in play.`
+
+    var desc3 = `On the front end, I use D3 and jQuery to convert those data into interactive spray charts that describe batters' tendencies.
+    Similar services that help teams prepare for opponents exist, but most cost hundreds of dollars per year. Statman Sprays is free to use.`
+
+    var link = "http://www.statmansprays.com/"
+
+    var git = "https://github.com/kdorian22/StatmanSprays"
+
+    var dataAtt = "https://stats.ncaa.org/"
+
+    var dataAttName = 'NCAA Stats repository'
+
+    var inspoAtt
+
+    var inspoAttName
+
+    var img = './src/statmanPic.png'
+
+    return (
+      <div>
+        {header()}
+        <div className = 'block'>
+          {Description('Stopwatch Baseball', desc, desc2, desc3, link, git, dataAtt, dataAttName, inspoAtt, inspoAttName, img)}
+        </div>
+      </div>
+    );
+  }
+ }
+
+ReactDOM.render(
+  <Projects />,
+  document.getElementById('all')
+);
+
+</script>

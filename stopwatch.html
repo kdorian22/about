@@ -1,0 +1,78 @@
+<html>
+ <body>
+   <div id = 'all'>
+   </div>
+ </body>
+</html>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="./src/reactComps.js" type="text/babel"> </script>
+<link rel = 'stylesheet' href="./src/styles.css"> </link>
+<link rel = 'stylesheet' href="./src/projectStyles.css"> </link>
+
+<script type="text/babel">
+
+class Projects extends React.Component {
+ render() {
+   var desc = `Baseball can be a slow game. And when you're not actually playing, it can get a little boring. Born from that
+   boredom is the game of Stopwatch Baseball where two opponents (often benchwarmers, like myself) take turns attempting to start
+    a stopwatch and stop it on exactly 1.00 second.`
+
+   var desc2 = `Stopping on 1 second earns that player a homerun -- 0.99 seconds a triple, 0.98 a double, and 0.97 a single. Everything else is an out.
+   3 outs and your turn is over. The goal is to score as many runs as possible over 9 innings, just like in actual baseball.`
+
+   var desc3 = `In this modern redesign, I use D3 to pit a single player against a bot who randomly scores runs according to a negative binomial
+   distribution with an averge score of 7/9 runs per inning. Can you hang with the bot?`
+
+   var link = "https://kdorian22.github.io/StopwatchBaseball/"
+
+   var git = "https://github.com/kdorian22/StopwatchBaseball"
+
+   var dataAtt
+
+   var dataAttName
+
+   var inspoAtt
+
+   var inspoAttName
+
+   var img = './src/stopwatchPic.png'
+
+   return (
+     <div>
+       {header()}
+       <div className = 'block'>
+         {Description('Stopwatch Baseball', desc, desc2, desc3, link, git, dataAtt, dataAttName, inspoAtt, inspoAttName, img)}
+       </div>
+     </div>
+   );
+ }
+}
+
+ReactDOM.render(
+ <Projects />,
+ document.getElementById('all')
+);
+
+</script>
+
+
+<style>
+ p{
+   font-size: 22px;
+   letter-spacing: 1px;
+   line-height: 30px;
+   margin-bottom:10px;
+   margin-top: 10px;
+   text-al
+ }
+
+ h1{
+   font-size: 36px;
+   margin-top: 30px;
+   margin-bottom: 15px;
+   color: black;
+ }
+
+</style>

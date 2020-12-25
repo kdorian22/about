@@ -1,0 +1,39 @@
+
+  img{
+    width: 190px;
+    float: right;
+    margin-top: 15px;
+    box-shadow: 0px 0px 5px gray;
+  }
+
+  p.bottom{
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-align: justify;
+  }
+
+  .desc{
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin-bottom:10px;
+    margin-top: 10px;
+    text-align: justify;
+    clear: both;
+  }
+
+  .two{
+    float: left;
+    width: 60%;
+  }
+
+  h1{
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: black;
+  }
+
+  h2{
+    clear: both;
+  }

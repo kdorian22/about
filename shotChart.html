@@ -1,0 +1,76 @@
+ <html>
+  <body>
+    <div id = 'all'>
+    </div>
+  </body>
+</html>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="./src/reactComps.js" type="text/babel"> </script>
+<link rel = 'stylesheet' href="./src/styles.css"> </link>
+<link rel = 'stylesheet' href="./src/projectStyles.css"> </link>
+
+<script type="text/babel">
+
+class Projects extends React.Component {
+  render() {
+    var desc = `This fun visualization was inspired by the work of Kirk Goldsberry and dozens of other baseketball pundits who have
+    attempted to redifine what it means to be an efficient shooter.`
+
+    var desc2 = `I used D3 hexbins to illustrate a shooter's tendencies during the 2018-'19 season. After selecting a player from the dropdown,
+    the size of each hexagon corresponds to the relative frequency of shots put up from that location and the color reflects the make percentage.`
+
+    var desc3 = `Click on the 'Show Shots' toggle in the top left to overlay the individual shots and use the filters to take a more focussed look.`
+
+    var link = "https://kdorian22.github.io/shotChart/"
+
+    var git = "https://github.com/kdorian22/shotChart"
+
+    var dataAtt = "https://www.nba.com/stats/"
+
+    var dataAttName = "NBA Stats API"
+
+    var inspoAtt = 'https://www.kirkgoldsberry.com'
+
+    var inspoAttName = 'Kirk Goldsberry, among others'
+
+    var img = './src/shotchartPic.png'
+
+    return (
+      <div>
+        {header()}
+        <div className = 'block'>
+          {Description('NBA Shot Chart', desc, desc2, desc3, link, git, dataAtt, dataAttName, inspoAtt, inspoAttName, img)}
+        </div>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Projects />,
+  document.getElementById('all')
+);
+
+</script>
+
+
+<style>
+  p{
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin-bottom:10px;
+    margin-top: 10px;
+    text-al
+  }
+
+  h1{
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: black;
+  }
+
+</style>
