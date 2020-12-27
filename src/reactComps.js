@@ -28,7 +28,7 @@ function Description(title, desc, desc2, desc3, link, git, dataAtt, dataAttName,
     var dataAttribution = <span> <h2>  <br></br> Attribution:</h2> <p className = 'bottom'> Data from <a href = {dataAtt} target = '_blank'> {dataAttName} </a> </p> </span>
   }
   if(inspoAtt != undefined){
-    var dataInspiration =  <p className = 'bottom'> Inspired by <a href = {inspoAtt} target = '_blank'> {inspoAttName} </a> </p> 
+    var dataInspiration =  <p className = 'bottom'> Inspired by <a href = {inspoAtt} target = '_blank'> {inspoAttName} </a> </p>
   }
   return (
     <div>
