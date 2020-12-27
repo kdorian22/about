@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel = 'stylesheet' href="./src/styles.css"> </link>
     <script src="./src/jquery.js"></script>
+    <script src="./src/reactComps.js" type="text/babel"> </script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   </head>
   <body>
     <div id = all>
@@ -11,10 +16,10 @@
       <br>
       <p>
         <strong> Hi, I'm Kenny! </strong> <br><br>
-      I'm a full-stack software developer specializing in creating dynamic, informative, and consise data visualizations. <br><br>
-        I currently work for the Atlanta Braves where I build new visuals & maintain and improve existing information systems for the Baseball Operations department. <br></br>
-        I grew up in Connecticut, went to college in St. Louis, and currently reside in Atlanta.<br><br>
-        In my spare time I'm an avid golfer and play the drums. <br><br>
+        I'm a full-stack software developer specializing in creating dynamic, informative, and concise data visualizations. <br><br>
+        I currently work for the Atlanta Braves where I build new visuals & maintain and improve existing information systems in Baseball Operations. <br></br>
+        I grew up in Connecticut; studied Statistics, Economics, and Computer Science at Washington University in  St. Louis; and currently reside in Atlanta.<br><br>
+        In my spare time, I'm an avid golfer and play the drums. <br><br>
         The best way to reach me is by email: <br> <br>
         <span id = email> kdorian22@gmail.com </span>
       </p><br><br><br>
@@ -38,17 +43,13 @@
         <li> SQL - SQL Server | MySQL </li>
         <li> HTML </li>
         <li> CSS </li>
+        <li> R </li>
       </p>
 
 
     </div>
   </body>
 </html>
-<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-<script src="./src/reactComps.js" type="text/babel"> </script>
-<link rel = 'stylesheet' href="./src/styles.css"> </link>
 
 <script type="text/babel">
 
@@ -58,6 +59,7 @@ ReactDOM.render(
 );
 
 </script>
+
 <style>
   #email{
     font-weight: bold;
@@ -68,6 +70,7 @@ ReactDOM.render(
     line-height: 30px;
     margin-bottom:10px;
     margin-top: 10px;
+    text-align: justify;
   }
   li{
     margin-top: 0px;
