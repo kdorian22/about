@@ -15,16 +15,15 @@
 
 class Projects extends React.Component {
   render() {
-    var desc = `Statman Sprays is a Flask web app used by college baseball teams to scout upcoming opponents.
-     It's a project I started as a student manager of the WashU baseball team
-     and have worked on on-and-off for the last couple years.`
+    var desc = `Statman Sprays is a web app built with Flask used by college baseball teams to scout upcoming opponents.
+     It's a project I started as a student manager of the WashU baseball team, but only recently revisited and deployed.`
 
-    var desc2 = `After using python to scrape the NCAA stats repository and backfill a MySQL database with 3 years of
-    play-by-play text strings, I parse each string to extract a batter, hit type, and hit location
-    for every single ball in play.`
+    var desc2 = `I used D3 and jQuery to produce interactive spray charts that describe batters' directional tendencies at the plate.
+     Coaches use these visuals to specifically position their defenders accoriding to each batter's tendencies.`
 
-    var desc3 = `On the front end, I use D3 and jQuery to convert those data into interactive spray charts that describe batters' tendencies.
-    Similar services that help teams prepare for opponents exist, but most cost hundreds of dollars per year. Statman Sprays is free to use.`
+    var desc3 = `The most challenging part of this project was taking textual play-play-play data from the NCAA stats repository and
+    parsing it to extract the correct batter, hit type, and hit location of ever ball put in play over the last 3 years of college
+    baseball. I used python to scrape the NCAA website and parse the text strings before storing that data in a MySQL database.   `
 
     var link = "http://www.statmansprays.com/"
 
