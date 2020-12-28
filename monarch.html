@@ -1,0 +1,62 @@
+<html>
+ <body>
+   <div id = 'all'>
+   </div>
+ </body>
+</html>
+<script src="./src/react.js"></script>
+<script src="./src/react-dom.js"></script>
+<script src="./src/babel.js"></script>
+<script src="./src/reactComps.js" type="text/babel"> </script>
+<link rel = 'stylesheet' href="./src/styles.css"> </link>
+<link rel = 'stylesheet' href="./src/projectStyles.css"> </link>
+
+<script type="text/babel">
+
+class Projects extends React.Component {
+ render() {
+   var desc = `Every year, millions of eastern Monarch butterflies make the massive roundtrip from their
+   overwintering grounds at the Oyamel Fir Forest in central Mexico, to one of a variety of breeding
+   grounds in the US and Canada, and back again.`
+
+   var desc2 = `In this visual, I use iNaturalist sighting data and D3's mapping funcitonality to animate their remarkable migration.`
+
+   var desc3
+
+   var link = "https://kdorian22.github.io/Monarch/"
+
+   var git = "https://github.com/kdorian22/Monarch"
+
+   var dataAtt = "https://www.inaturalist.org"
+
+   var dataAttName = 'iNaturalist'
+
+   var inspoAtt = "https://ebird.org/science/status-and-trends/canvas/abundance-map-weekly"
+
+   var inspoAttName = 'eBird abundance animations'
+
+   var img = './src/monarchPic.png'
+
+   return (
+     <div>
+       {header()}
+       <div className = 'block'>
+         {Description('Flight of the Monarchs', desc, desc2, desc3, link, git, dataAtt, dataAttName, inspoAtt, inspoAttName, img)}
+       </div>
+     </div>
+   );
+ }
+}
+
+ReactDOM.render(
+ <Projects />,
+ document.getElementById('all')
+);
+
+</script>
+
+
+<style>
+
+
+</style>
