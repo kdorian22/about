@@ -24,8 +24,13 @@ function Description(title, desc, desc2, desc3, link, git, dataAtt, dataAttName,
   }else{
     var description3 =<div> </div>
   }
+  if(dataAtt != undefined | inspoAtt != undefined){
+    var attWord = <h2>  <br></br> Attribution:</h2>
+  }else{
+    var attWord = <h2> </h2>
+  }
   if(dataAtt != undefined){
-    var dataAttribution = <span> <h2>  <br></br> Attribution:</h2> <p className = 'bottom'> Data from <a href = {dataAtt} target = '_blank'> {dataAttName} </a> </p> </span>
+    var dataAttribution = <span> <p className = 'bottom'> Data from <a href = {dataAtt} target = '_blank'> {dataAttName} </a> </p> </span>
   }
   if(inspoAtt != undefined){
     var dataInspiration =  <p className = 'bottom'> Inspired by <a href = {inspoAtt} target = '_blank'> {inspoAttName} </a> </p>
@@ -44,6 +49,7 @@ function Description(title, desc, desc2, desc3, link, git, dataAtt, dataAttName,
       <p className = 'bottom'> View <a href = {link} target = '_blank'> {title} </a> </p>
       <h2>  <br></br> Code:</h2>
       <p className = 'bottom'> Code on <a href = {git} target = '_blank'> Github </a>  </p>
+      {attWord}
       {dataAttribution}
       {dataInspiration}
     </div>

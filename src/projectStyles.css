@@ -1,15 +1,41 @@
 
-  img{
-    width: 190px;
-    float: right;
-    margin-top: 15px;
-    box-shadow: 0px 0px 5px gray;
+  @media (min-width: 800px) {
+    img{
+      width: 190px;
+      /* height: 180px; */
+      float: right;
+      margin-top: 15px;
+      box-shadow: 0px 0px 5px gray;
+    }
+    .two{
+      float: left;
+      width: 60%;
+    }
+    p.bottom{
+      font-size: 22px;
+      letter-spacing: 1px;
+      text-align: justify;
+    }
   }
 
-  p.bottom{
-    font-size: 22px;
-    letter-spacing: 1px;
-    text-align: justify;
+  @media (max-width: 800px) {
+    img{
+      width: 98%;
+      margin-left: 1%
+      float: right;
+      margin-top: 15px;
+      box-shadow: 0px 0px 5px gray;
+      margin-bottom:50px;
+    }
+    .two{
+      float: left;
+      width: 100% !important;
+    }
+    p.bottom{
+      font-size: 22px;
+      letter-spacing: 1px;
+      text-align: left;
+    }
   }
 
   .desc{

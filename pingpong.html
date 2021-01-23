@@ -1,0 +1,71 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+ <body>
+   <div id = 'all'>
+   </div>
+ </body>
+</html>
+<script src="./src/react.js"></script>
+<script src="./src/react-dom.js"></script>
+<script src="./src/babel.js"></script>
+<script src="./src/reactComps.js" type="text/babel"> </script>
+<link rel = 'stylesheet' href="./src/styles.css"> </link>
+<link rel = 'stylesheet' href="./src/projectStyles.css"> </link>
+
+<script type="text/babel">
+
+class Projects extends React.Component {
+ render() {
+   var desc = `A buddy of mine reached out and asked me if I could visualize the results of tge 60+ games of ping pong he and his father played in their
+   basement over the summer of 2020.`
+
+   var desc2 = `I used LeBeau Franck's beeswarm D3 plugin and a line graph to show the distribution of wins and the point spread over time.
+   Hover over the games on the plots for details.`
+
+   var desc3
+
+   var link = "https://kdorian22.github.io/PingPong/"
+
+   var git = "https://github.com/kdorian22/PingPong"
+
+   var dataAtt
+
+   var dataAttName
+
+   var inspoAtt ='https://github.com/Kcnarf/d3-beeswarm'
+
+   var inspoAttName = "LeBeau Franck's beeswarm D3 plugin"
+
+   var img = './src/pingpongPic.png'
+
+   return (
+     <div>
+       {header()}
+       <div className = 'block'>
+         {Description('Ping Pong Matchups', desc, desc2, desc3, link, git, dataAtt, dataAttName, inspoAtt, inspoAttName, img)}
+       </div>
+     </div>
+   );
+ }
+}
+
+ReactDOM.render(
+ <Projects />,
+ document.getElementById('all')
+);
+
+</script>
+
+
+<style>
+
+  img{
+    box-shadow: none!important;
+  }
+
+</style>
