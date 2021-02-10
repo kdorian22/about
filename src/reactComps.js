@@ -4,7 +4,7 @@ function header(){
     <div id = 'header'>
       <div id = 'title'> KD </div>
       <div id = 'links'>
-        <a className = 'headAnchor' href = "./project">PROJECTS</a> |
+        <a className = 'headAnchor' href = "./project">PROJECTS</a> | <span>&nbsp;</span>
         <a className = 'headAnchor' href = "./">ABOUT</a>
       </div>
     </div>
