@@ -1,2 +1,2 @@
-# personalSite
-Personal Site for Kenny Dorian
+# Personal Site for Kenny Dorian
+
