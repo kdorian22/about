@@ -1,0 +1,61 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+ <body>
+   <div id = 'all'>
+   </div>
+ </body>
+</html>
+<script src="./src/react.js"></script>
+<script src="./src/react-dom.js"></script>
+<script src="./src/babel.js"></script>
+<script src="./src/reactComps.js" type="text/babel"> </script>
+<link rel = 'stylesheet' href="./src/styles.css"> </link>
+<link rel = 'stylesheet' href="./src/projectStyles.css"> </link>
+
+<script type="text/babel">
+
+class Projects extends React.Component {
+ render() {
+   var desc = `It's the consensus of the data visaulaiation community that radar charts are bad practice. Humans are notoriously bad at estimating angles and the nature of the plot implys the correlation of neighboring matrics. That didn't stop me from takeing a swing at it.`
+
+   var desc2 = `In this tool, I use radar charts to allow a user to compare multiple players at once. My takeaway: the data viz community was right. While it was a good exercise in plotting angles, this is probably not the best way to display these data.`
+
+   var desc3 = `Enjoy!`
+
+   var link = "https://kdorian22.github.io/ComparePlayers/"
+
+   var git = "https://github.com/kdorian22/ComparePlayers"
+
+   var dataAtt = "https://www.trumedianetworks.com/"
+
+   var dataAttName = "TruMedia"
+
+   var inspoAtt
+
+   var inspoAttName
+
+   var img = './src/comparePlayersPic.png'
+
+   return (
+     <div>
+       {header()}
+       <div className = 'block'>
+         {Description('NYC Subway Performance', desc, desc2, desc3, link, git, dataAtt, dataAttName, inspoAtt, inspoAttName, img)}
+       </div>
+     </div>
+   );
+ }
+}
+
+ReactDOM.render(
+ <Projects />,
+ document.getElementById('all')
+);
+
+</script>
+

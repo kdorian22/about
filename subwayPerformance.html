@@ -1,0 +1,60 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+ <body>
+   <div id = 'all'>
+   </div>
+ </body>
+</html>
+<script src="./src/react.js"></script>
+<script src="./src/react-dom.js"></script>
+<script src="./src/babel.js"></script>
+<script src="./src/reactComps.js" type="text/babel"> </script>
+<link rel = 'stylesheet' href="./src/styles.css"> </link>
+<link rel = 'stylesheet' href="./src/projectStyles.css"> </link>
+
+<script type="text/babel">
+
+class Projects extends React.Component {
+ render() {
+   var desc = `Inspired by Hans Rosling’s “Health and Wealth” visualization, I set out to build a web app to diagram and evaluate the relative performance of New York City’s subway by comparing the number of delays and major incidents on each line since the start of 2020. `
+
+   var desc2 = `When I first started, I was hoping to include some sort of ridership number as an additional dimension but estimating those numbers proved to be too heavy of a task`
+
+   var desc3
+
+   var link = "https://kdorian22.github.io/subway-performance/"
+
+   var git = "https://github.com/kdorian22/subway-performance"
+
+   var dataAtt = "https://data.ny.gov/browse?Dataset-Information_Agency=Metropolitan+Transportation+Authority"
+
+   var dataAttName = "MTA Open Data"
+
+   var inspoAtt ='https://www.youtube.com/watch?v=jbkSRLYSojo'
+
+   var inspoAttName = "Hans Rosling's Country Visualization"
+
+   var img = './src/trainPic.png'
+
+   return (
+     <div>
+       {header()}
+       <div className = 'block'>
+         {Description('NYC Subway Performance', desc, desc2, desc3, link, git, dataAtt, dataAttName, inspoAtt, inspoAttName, img)}
+       </div>
+     </div>
+   );
+ }
+}
+
+ReactDOM.render(
+ <Projects />,
+ document.getElementById('all')
+);
+
+</script>

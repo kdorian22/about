@@ -14,20 +14,16 @@
 <link rel = 'stylesheet' href="./src/styles.css"> </link>
 <script type="text/babel">
 
-function Proj(proj, odd, desc, pic, link, cla){
+function Proj(proj, odd, desc, pic, link){
   if(odd == 1){
     var classes = 'project odd'
   }else{
     var classes = 'project even'
   }
-  if(cla == 'ping'){
-    var picClass = 'projPic ping'
-  }else{
-    var picClass = 'projPic'
-  }
+
   return (
     <div className={classes}>
-      <img src = {pic} className = {picClass}></img>
+      <img src = {pic} className ="projPic"></img>
 
       <div className = 'projDesc'>
         <h2> <a href = {link} > {proj} </a> </h2>
@@ -46,23 +42,28 @@ class Projects extends React.Component {
         <div>
           {Proj('Statman Sprays', 1,
           'Flask app used by college baseball teams to scout upcoming opponents'
-          ,'./src/statmanPic.png', './statmanSprays', '')}
+          ,'./src/statmanPic.png', './statmanSprays')}
+
+          {Proj('NYC Subway Performance',  0,
+          'Visualization of NYC Subway delays and incidents '
+          ,'./src/trainPic.png', './subwayPerformance')}
+
+          {Proj('MLB Player Comparison',  1,
+          'Who said radar charts are a swing and a miss?'
+          ,'./src/comparePlayersPic.png', './comparePlayers')}
 
           {Proj('NBA Shot Chart',  0,
           'Using D3 hexbins to visualize NBA shooting tendencies'
-          ,'./src/shotchartPic.png', './shotChart', '')}
+          ,'./src/shotchartPic.png', './shotChart')}
 
           {Proj('Flight of the Monarchs', 1,
           'Animating the yearly migration of the Monarch butterfly'
-          ,'./src/monarchPic.png', './monarch', '')}
+          ,'./src/monarchPic.png', './monarch')}
 
           {Proj('Stopwatch Baseball', 0,
           'A modern take on a timeless game: Can you beat the bot?'
-          ,'./src/stopwatchPic.png', './stopwatch', '')}
+          ,'./src/stopwatchPic.png', './stopwatch')}
 
-          {Proj('Ping Pong', 1,
-          'Tracking the ping pong matches of a buddy and his old man.'
-          ,'./src/pingpongPic.png', './pingpong', 'ping')}
         </div>
       </div>
     );
@@ -86,7 +87,7 @@ ReactDOM.render(
 
     .projPic{
       display: none;
-      box-shadow: 0px 0px 5px gray;
+      box-shadow: 0px 0px 5px black;
       float: right;
       width:32%;
       max-height: 170px;
@@ -176,9 +177,6 @@ ReactDOM.render(
     box-shadow: 0px 0px 0px !important;
   }
 
-  .even{
-    /* background-color: rgb(245,245,245) */
-  }
   .even .projPic{
     float: left;
   }
